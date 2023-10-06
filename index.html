@@ -4,8 +4,38 @@
 		<meta name="viewport" content="width=device-width">
 	</head>
 	<body>
-		<video controls loop autoplay muted playsinline>
-			<source src= "2048536 - Toyota - Srk Foundry - Go Foundation - IPTV-FULL-21.mp4" type="video/mp4">
+		<video id="myVideo" controls loop autoplay muted playsinline>
+			<source src="2048536 - Toyota - Srk Foundry - Go Foundation - IPTV-FULL-21.mp4" type="video/mp4">
 		</video>
+
+		<script>
+			// List of video sources
+			const videoSources = [
+				"2051840 - Kennedy - Countdown To Siren Purple - IPTV-FULL-21.mp4",
+				"2048536 - Toyota - Srk Foundry - Go Foundation - IPTV-FULL-21.mp4",
+				"051849 - Kennedy - 5 Minute Warning Purple - IPTV-FULL-21.mp4",
+				// Add more video sources as needed
+			];
+
+			const videoElement = document.getElementById("myVideo");
+			let currentVideoIndex = 0;
+
+			// Event listener to play the next video when the current video ends
+			videoElement.addEventListener("ended", playNextVideo);
+
+			function playNextVideo() {
+				// Increment the current video index
+				currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
+
+				// Set the new video source
+				videoElement.src = videoSources[currentVideoIndex];
+
+				// Reload the video to ensure it starts from the beginning
+				videoElement.load();
+
+				// Play the new video
+				videoElement.play();
+			}
+		</script>
 	</body>
 </html>
