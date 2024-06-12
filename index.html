@@ -1,34 +1,13 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width">
+<head>
+<meta name="viewport" content="width=device-width">
 </head>
-	<body>
-		<video id="myVideo" controls autoplay muted playsinline>
-			<source src="2048536 - Toyota - Srk Foundry - Go Foundation - IPTV-FULL-21.mp4" type="video/mp4">
-			<source src="2051840 - Kennedy - Countdown To Siren Purple - IPTV-FULL-21.mp4" type="video/mp4">
-			<source src="2051849 - Kennedy - 5 Minute Warning Purple - IPTV-FULL-21.mp4" type="video/mp4">
-		</video>
-
-		<script>
-			const videoSources = [
-				"2048536 - Toyota - Srk Foundry - Go Foundation - IPTV-FULL-21.mp4",
-				"2051840 - Kennedy - Countdown To Siren Purple - IPTV-FULL-21.mp4",
-				"2051849 - Kennedy - 5 Minute Warning Purple - IPTV-FULL-21.mp4",
-				// Add more video sources as needed
-			];
-
-			const videoElement = document.getElementById("myVideo");
-			let currentVideoIndex = 0;
-
-			videoElement.addEventListener("ended", playNextVideo);
-
-			function playNextVideo() {
-				currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
-				videoElement.src = videoSources[currentVideoIndex];
-				videoElement.load();
-				videoElement.play();
-			}
-		</script>
-	</body>
+<body style="margin: 0; padding: 0;">
+<video controls loop autoplay muted playsinline style="object-position: 0% 0%;" width="1920" height="1080">
+<source src="
+https://github.com/mackamacka/LoopingVideo/raw/main/Peroni%20Screens.mp4"
+type="video/mp4">
+</video>
+</body>
 </html>
